@@ -7,6 +7,7 @@ const app = express();
 const ejsMate = require("ejs-mate");  
 const appRouter = require("./router/product.js");
 const dbUrl = process.env.MONGODB_URL;
+const secret = process.env.SECRET;
 const session = require("express-session");
 
 
@@ -19,7 +20,7 @@ app.use(express.static(path.join(__dirname,"public")));
 
 
 app.use(session({
-    secret: "undo-secret",
+    secret:secret,
     resave: false,
     saveUninitialized: true
 }));
