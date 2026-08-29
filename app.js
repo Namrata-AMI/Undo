@@ -25,6 +25,12 @@ app.use(session({
     saveUninitialized: true
 }));
 
+
+app.get("/", (req, res) => {
+    res.render("lists/index");
+});
+
+
 app.use("/app",appRouter);
 
 main()
