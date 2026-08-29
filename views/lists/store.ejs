@@ -1,0 +1,385 @@
+<% layout("layouts/boilerplate") %>
+
+<section class="undo-store">
+
+    <!-- =========================
+         STORE HERO
+    ========================== -->
+
+    <section class="store-hero">
+
+        <div class="store-hero-copy">
+
+            <span class="eyebrow">
+                THE UNDO STORE
+            </span>
+
+            <h1>
+                Skincare,
+                <em>simplified.</em>
+            </h1>
+
+            <p>
+                Thoughtfully formulated essentials
+                for skin that feels good in its own way.
+            </p>
+
+            <a href="#shop" class="minimal-btn">
+                SHOP ALL
+                <span>↗</span>
+            </a>
+
+        </div>
+
+
+        <div class="store-hero-visual">
+
+            <div class="hero-number">
+                01
+            </div>
+
+            <img
+                src="/assets/img5.png"
+                alt="Undo skincare"
+            >
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         COLLECTIONS
+    ========================== -->
+
+    <section class="store-collections">
+
+        <div class="section-intro">
+
+            <span class="eyebrow">
+                01 — COLLECTIONS
+            </span>
+
+            <h2>
+                Find your
+                <em>ritual.</em>
+            </h2>
+
+        </div>
+
+
+        <div class="collection-grid">
+
+            <a href="#" class="collection-item">
+
+                <div class="collection-image">
+
+                    <img
+                        src="/assets/img3.png"
+                        alt="Cleansers"
+                    >
+
+                    <span class="collection-arrow">
+                        ↗
+                    </span>
+
+                </div>
+
+                <div class="collection-meta">
+
+                    <h3>Cleansers</h3>
+
+                    <span>
+                        Explore
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <a href="#" class="collection-item">
+
+                <div class="collection-image">
+
+                    <img
+                        src="/assets/img13.png"
+                        alt="Serums"
+                    >
+
+                    <span class="collection-arrow">
+                        ↗
+                    </span>
+
+                </div>
+
+                <div class="collection-meta">
+
+                    <h3>Serums</h3>
+
+                    <span>
+                        Explore
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <a href="#" class="collection-item">
+
+                <div class="collection-image">
+
+                    <img
+                        src="/assets/img14.png"
+                        alt="Moisturizers"
+                    >
+
+                    <span class="collection-arrow">
+                        ↗
+                    </span>
+
+                </div>
+
+                <div class="collection-meta">
+
+                    <h3>Moisturizers</h3>
+
+                    <span>
+                        Explore
+                    </span>
+
+                </div>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         PRODUCTS
+    ========================== -->
+
+    <section class="store-products" id="shop">
+
+        <div class="products-heading">
+
+            <div>
+
+                <span class="eyebrow">
+                    02 — THE EDIT
+                </span>
+
+                <h2>
+                    Featured
+                    <em>essentials.</em>
+                </h2>
+
+            </div>
+
+
+            <span class="product-count">
+                <%= products.length %> PRODUCTS
+            </span>
+
+        </div>
+
+
+        <div class="store-product-grid">
+
+            <% products.forEach((product, index) => { %>
+
+                <article class="store-product">
+
+                    <a
+                        href="/app/products/<%= product._id %>"
+                        class="product-visual"
+                    >
+
+                        <span class="product-index">
+                            <%= String(index + 1).padStart(2, "0") %>
+                        </span>
+
+                        <img
+                            src="<%= product.image %>"
+                            alt="<%= product.name %>"
+                        >
+
+                        <span class="product-view">
+                            VIEW ↗
+                        </span>
+
+                    </a>
+
+
+                    <div class="product-details">
+
+                        <div>
+
+                            <h3>
+                                <%= product.name %>
+                            </h3>
+
+                            <p>
+                                <%= product.category %>
+                            </p>
+
+                        </div>
+
+                        <strong>
+                            ₹<%= product.price %>
+                        </strong>
+
+                    </div>
+
+                </article>
+
+            <% }) %>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         INGREDIENTS
+    ========================== -->
+
+    <section class="ingredient-section">
+
+        <div class="ingredient-heading">
+
+            <span class="eyebrow">
+                03 — FORMULATION
+            </span>
+
+            <h2>
+                What's inside
+                <em>matters.</em>
+            </h2>
+
+        </div>
+
+
+        <div class="ingredient-list">
+
+            <div class="ingredient-row">
+
+                <span>01</span>
+
+                <h3>
+                    Niacinamide
+                </h3>
+
+                <p>
+                    Balance and refine.
+                </p>
+
+            </div>
+
+
+            <div class="ingredient-row">
+
+                <span>02</span>
+
+                <h3>
+                    Hyaluronic Acid
+                </h3>
+
+                <p>
+                    Hydrate and replenish.
+                </p>
+
+            </div>
+
+
+            <div class="ingredient-row">
+
+                <span>03</span>
+
+                <h3>
+                    Centella Asiatica
+                </h3>
+
+                <p>
+                    Soothe and support.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         EDITORIAL
+    ========================== -->
+
+    <section class="store-editorial">
+
+        <img
+            src="/assets/img6.png"
+            alt="Undo skincare"
+        >
+
+        <div class="editorial-overlay">
+
+            <span class="eyebrow">
+                THE UNDO PHILOSOPHY
+            </span>
+
+            <h2>
+                Good skin starts
+                with simple care.
+            </h2>
+
+            <a href="#shop" class="minimal-btn light">
+                EXPLORE PRODUCTS
+                <span>↗</span>
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         NEWSLETTER
+    ========================== -->
+
+    <section class="store-newsletter">
+
+        <span class="eyebrow">
+            STAY CLOSE
+        </span>
+
+        <h2>
+            A little UNDO,
+            <em>in your inbox.</em>
+        </h2>
+
+        <form>
+
+            <input
+                type="email"
+                placeholder="Your email address"
+                required
+            >
+
+            <button>
+                JOIN ↗
+            </button>
+
+        </form>
+
+    </section>
+
+</section>

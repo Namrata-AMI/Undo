@@ -1,0 +1,77 @@
+<%- layout("layouts/boilerplate.ejs") %>
+
+<section class="sale-page">
+
+    <div class="sale-heading">
+
+        <span class="eyebrow">
+            UNDO / SALE
+        </span>
+
+        <h1>
+            Less price.
+            <em>Same care.</em>
+        </h1>
+
+        <p>
+            Thoughtful essentials, now at a little less.
+        </p>
+
+    </div>
+
+
+    <div class="sale-grid">
+
+        <% products.forEach((product, index) => { %>
+
+            <a
+                href="/app/products/<%= product._id %>"
+                class="sale-product"
+            >
+
+                <div class="sale-image">
+
+                    <span>
+                        SALE
+                    </span>
+
+                    <img
+                        src="<%= product.image %>"
+                        alt="<%= product.name %>"
+                    >
+
+                </div>
+
+                <div class="sale-info">
+
+                    <div>
+                        <h3>
+                            <%= product.name %>
+                        </h3>
+
+                        <p>
+                            <%= product.category %>
+                        </p>
+                    </div>
+
+                    <div class="sale-price">
+
+                        <del>
+                            ₹<%= product.price %>
+                        </del>
+
+                        <strong>
+                            ₹<%= product.salePrice %>
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </a>
+
+        <% }) %>
+
+    </div>
+
+</section>

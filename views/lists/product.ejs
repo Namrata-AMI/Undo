@@ -1,0 +1,60 @@
+<%- layout("/layouts/boilerplate.ejs") %>
+
+<div class="product-page">
+
+    <!-- PRODUCT IMAGE -->
+    <div class="product-page-image">
+
+        <img
+            src="<%= product.image %>"
+            alt="<%= product.name %>"
+        >
+
+    </div>
+
+
+    <!-- PRODUCT INFORMATION -->
+    <div class="product-page-info">
+
+        <span class="product-label">
+            UNDO
+        </span>
+
+        <h1>
+            <%= product.name %>
+        </h1>
+
+        <p class="product-category">
+            <%= product.category %>
+        </p>
+
+
+        <div class="product-description">
+
+            <p>
+                <%= product.description %>
+            </p>
+
+        </div>
+
+
+        <div class="product-buy-row">
+
+            <span class="product-price">
+                ₹<%= product.price %>
+            </span>
+
+          <form action="/app/cart/<%= product._id %>" method="POST">
+
+            <button type="submit" class="add-to-bag">
+                ADD TO BAG
+                <span>→</span>
+            </button>
+
+        </form>
+
+        </div>
+
+    </div>
+
+</div>

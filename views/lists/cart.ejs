@@ -1,0 +1,83 @@
+<%- layout("/layouts/boilerplate.ejs") %>
+
+<section class="cart-page">
+
+    <div class="cart-heading">
+        <span>CART</span>
+        <h1>Your selection</h1>
+    </div>
+
+    <div class="cart-content">
+
+        <!-- PRODUCTS -->
+        <div class="cart-products">
+
+            <% if (cart && cart.length > 0) { %>
+
+                <% cart.forEach(item => { %>
+
+                    <div class="cart-item">
+
+                        <div class="cart-item-image">
+                            <img src="<%= item.product.image %>"
+                                 alt="<%= item.product.name %>">
+                        </div>
+
+                        <div class="cart-item-info">
+
+                            <h2>
+                                <%= item.product.name %>
+                            </h2>
+
+                            <p>
+                                <%= item.product.category %>
+                            </p>
+
+                            <span>
+                                ₹<%= item.product.price %>
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                <% }) %>
+
+            <% } else { %>
+
+                <div class="empty-cart">
+                    <p>Your cart is empty.</p>
+                    <a href="/app/store">Continue shopping →</a>
+                </div>
+
+            <% } %>
+
+        </div>
+
+
+        <!-- SUMMARY -->
+        <div class="cart-summary">
+
+            <span>SUMMARY</span>
+
+            <div class="summary-row">
+                <p>Subtotal</p>
+                <strong>₹<%= total || 0 %></strong>
+            </div>
+
+            <div class="summary-line"></div>
+
+            <div class="summary-total">
+                <p>Total</p>
+                <strong>₹<%= total || 0 %></strong>
+            </div>
+
+            <a href="/app/checkout" class="checkout-btn">
+                CHECKOUT →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>

@@ -1,0 +1,170 @@
+<% layout("layouts/boilerplate") %>
+
+<div class="contact-page">
+
+    <!-- FLOATING BACKGROUND -->
+    <div class="contact-orb orb-one"></div>
+    <div class="contact-orb orb-two"></div>
+
+
+    <!-- CONTACT HERO -->
+    <section class="contact-hero">
+
+        <div class="contact-small-title">
+            <span>✦</span>
+            CONTACT / 01
+        </div>
+
+        <h1 class="contact-title">
+            Let's create
+            <span>something</span>
+            beautiful.
+        </h1>
+
+        <p class="contact-intro">
+            Have a question, an idea, or simply want to say hello?
+            We'd love to hear from you.
+        </p>
+
+    </section>
+
+
+    <!-- CONTACT MAIN -->
+    <section class="contact-main">
+
+        <!-- LEFT -->
+        <div class="contact-info">
+
+            <p class="contact-label">
+                GET IN TOUCH
+            </p>
+
+            <div class="contact-detail">
+                <span>Email</span>
+                <a href="mailto:hello@undo.com">
+                    hello@undo.com
+                </a>
+            </div>
+
+            <div class="contact-detail">
+                <span>Phone</span>
+                <a href="tel:+910000000000">
+                    +91 XXXXX XXXXX
+                </a>
+            </div>
+
+            <div class="contact-detail">
+                <span>Based in</span>
+                <p>India</p>
+            </div>
+
+
+            <div class="contact-socials">
+
+                <a href="#">
+                    Instagram <span>↗</span>
+                </a>
+
+                <a href="#">
+                    Pinterest <span>↗</span>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT -->
+        <div class="contact-form-wrapper">
+
+            <p class="contact-label">
+                SEND A MESSAGE
+            </p>
+
+            <form action="/app/contact" method="POST">
+
+                <div class="contact-field">
+
+                    <label for="name">
+                        01 / NAME
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Your name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="contact-field">
+
+                    <label for="email">
+                        02 / EMAIL
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Your email"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="contact-field">
+
+                    <label for="message">
+                        03 / MESSAGE
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        placeholder="Tell us what's on your mind..."
+                        rows="4"
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="contact-submit"
+                >
+                    <span>LET'S TALK</span>
+                    <span class="submit-arrow">↗</span>
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- BOTTOM MARQUEE -->
+    <section class="contact-marquee">
+
+        <div class="marquee-track">
+
+            <span>UNDO</span>
+            <span>✦</span>
+            <span>LET'S CONNECT</span>
+            <span>✦</span>
+            <span>UNDO</span>
+            <span>✦</span>
+            <span>LET'S CONNECT</span>
+            <span>✦</span>
+
+        </div>
+
+    </section>
+
+</div>
