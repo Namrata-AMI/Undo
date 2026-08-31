@@ -33,18 +33,18 @@ app.get("/", (req, res) => {
 
 app.use("/app",appRouter);
 
-main()
-    .then((res)=>{
-        console.log(res);
-        console.log("working db")
-    })
-    .catch((err)=>{
-        console.log(err);
-        console.log("db error")
-});
 
-async function main(){
-    await mongoose.connect(dbUrl);   
+
+main()
+    .then(() => {
+        console.log("working db");
+    })
+    .catch((err) => {
+        console.error("MongoDB connection error:", err.message);
+    });
+
+async function main() {
+    await mongoose.connect(dbUrl);
 }
 
 
