@@ -1,5 +1,9 @@
+const path = require("path");
 const mongoose = require("mongoose");
-require("dotenv").config({ path: "../.env" });
+
+require("dotenv").config({
+    path: path.join(__dirname, "../.env")
+});
 
 const initData = require("./data");
 const Product = require("../models/product");
@@ -12,7 +16,6 @@ async function main() {
     console.log("DB Connected");
 
     await Product.deleteMany({});
-
     await Product.insertMany(initData.data);
 
     console.log("Data was initialized");
